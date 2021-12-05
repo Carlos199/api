@@ -8,6 +8,7 @@ const port = 3000
 
 const userRouters = require('./src/routes/user')
 const itemsRouters = require('./src/routes/item')
+const authRouters = require('./src/routes/auth')
 
 // for parsing json
 
@@ -27,6 +28,7 @@ app.use(
 
 app.use(userRouters)
 app.use(itemsRouters)
+app.use(authRouters)
 
 app.listen(port, () => {
   console.log('server starting')

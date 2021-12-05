@@ -9,6 +9,11 @@ const UserScheme = new mongoose.Schema(
     apellido: {
       type: String
     },
+    userName: {
+      type: String,
+      unique: true,
+      required: true
+    },
     avatar: {
       type: String,
       default: 'http://image.com'

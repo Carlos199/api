@@ -36,9 +36,7 @@ exports.insertData = (req, res) => {
 
 exports.updateData = async (req, res) => {
   const { id } = req.body
-  console.log(req.body.id, 'datos')
   const body = req.body
-  console.log(body)
   const result = await model.findById(id)
   result.name = body.name
   result.apellido = body.apellido
